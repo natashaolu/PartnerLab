@@ -17,7 +17,10 @@ export const FieldToIncludesInSearchResults: string[] = [
   "sfimage_url__c",
   "adspecial",
   "ytthumbnailurl",
-  "ytvideoduration","pdp", "dictField"
+  "ytvideoduration",
+  "pdp", 
+  "dictField", 
+  "ec_images"
 ];
 
 export const NoResultRecommendationConfig = {

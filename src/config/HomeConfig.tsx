@@ -108,7 +108,7 @@ export const HomeRecommendationConfig: RecommendationType[] = [
     type: "slider" // "list" | "carousel" | "slider"
   },
   {
-    title: "Recommendations",
+    title: "Popular Items",
     description: "Here are your personalized recommendations",
     numberOfResults: 15,
     imageField: "ec_images",
@@ -119,7 +119,7 @@ export const HomeRecommendationConfig: RecommendationType[] = [
     type: "carousel" // "list" | "carousel" | "slider"
   },
   {
-    title: "Recommendations",
+    title: "Most Viewed",
     description: "Here are your personalized recommendations",
     numberOfResults: 8,
     imageField: "ec_images",

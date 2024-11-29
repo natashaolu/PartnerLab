@@ -61,7 +61,7 @@ const SearchBoxRenderer: FunctionComponent<SearchBoxProps> = (props) => {
       renderInput={(params) => (
           <TextField 
             {...params}
-            placeholder={getText("Search", SearchConfigTranslations, "searchPlaceholder")}
+            placeholder={getText("Search for an item", SearchConfigTranslations, "searchPlaceholder")}
             size="small" 
             className='search-box'
             InputProps={{
