@@ -22,7 +22,7 @@ export const FieldToIncludesInSearchResults: string[] = [
 
 export const NoResultRecommendationConfig = {
   heading : "Popular Results",
-  pipeline : "Sports",
+  pipeline : "cmh-search-sandbox",
   searchHub : "default",
   NumberofResults : 6,
   imageField : "ec_images",
