@@ -76,21 +76,21 @@ export const TopHeaderConfig = [
 
 
 export const HeroConfig = {
-  title: "The only AI platform specifically built to make every digital experience delightful, relevant, and profitable",
-  description: "Advanced search. Relevant recommendations. Unrivaled personalization",
+  title: "Find clothes that fits you",
+  description: "we believe that every person's shape should be celebrated with fabulous clothes that fit and feel good on your body today",
   background: HeroImage,
   buttonText: "Explore",
   onClickButtonRedirect: "/search",
   width : "100%",
-  height: "800px",
+  height: "700px",
 
   // Hero Image Text CSS config
-  titleFontSize : "32px",
+  titleFontSize : "52px",
   titleFontWeight : "600",
   titleColor : '#000000',
   titleWidth : "600px",
   subTitleWidth : "550px",
-  subTitleFontSize : "16px",
+  subTitleFontSize : "22px",
   subTitleColor : '#000000'
 
 };

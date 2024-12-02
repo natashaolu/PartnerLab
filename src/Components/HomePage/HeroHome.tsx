@@ -55,7 +55,7 @@ const HeroWrapper = styled.div`
     padding-left: 320px;
     margin-top:100px;
     background-position: center;
-    background-color: #ffffff;
+    background-color: #F3F3F1;
 
     @media (max-width: ${Theme.mobileSize}px) {
         padding-left: 10px;
@@ -93,7 +93,7 @@ const ImageWrapper = styled.div`
 
 const TextWrapper = styled.div`
 width: 100%;
-margin-top: 50px;
+margin-top: 150px;
 
 `
 

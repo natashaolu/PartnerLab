@@ -2,11 +2,11 @@ import { createTheme } from "@mui/material/styles";
 import { red } from "@mui/material/colors";
 
 export const Theme = {
-  primary: "#5d237d",
+  primary: "#000000",
   primaryText: "#282829",
 
 
-  button: "#752e9c",
+  button: "#000000",
   buttonText : '#FFFFFF',
 
 
@@ -14,11 +14,11 @@ export const Theme = {
   secondaryText : '#626971',
 
 
-  searchBarTitle : '#FFFFFF',
-  searchIcon: "#752e9c",
+  searchBarTitle : '#000000',
+  searchIcon: "#000000",
   searchTabBar: "#5d237d",
   searchTabBorder: "#FFFFFF",
-  searchBarBackground: "#451c5c",
+  searchBarBackground: "#F2F0EB",
   searchTabText : "#FFFFFF",
 
   footer: "#FFFFFF",

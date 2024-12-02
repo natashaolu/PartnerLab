@@ -89,21 +89,35 @@ const Header: React.FC = () => {
   return (
     <>
       <Wrapper>
-         <Discount>
-         <TopRight>
+        <Discount>
+          <TopRight>
             <TopLinks>
               <TopLink href="#">15% Discount on Champagne* with Couponcode: CHEERS15</TopLink>
             </TopLinks>
           </TopRight>
-        
-          
 
-        </Discount> 
+
+
+        </Discount>
         <Navbar>
           <MainNavBar>
             <MainNavBarigth>
-            {/* <span className="header-sub-tl">The Closet</span> */}
-              <Logo src={HeaderLogo} onClick={() => navigate("/home")} />
+              {/* The Closet branding with navigation */}
+              <span
+                style={{
+                  marginLeft: "10px",
+                  fontSize: "36px",
+                  fontWeight: "bold",
+                  textAlign: "right",
+                  cursor: "pointer", // Make the span clickable
+                  display: "inline-block", // Ensure proper alignment
+                  lineHeight: "1.2", // Adjust line spacing
+                }}
+                onClick={() => navigate("/home")} // Add navigation functionality
+              >
+                <div style={{ display: "block" }}>The</div>
+                <div style={{ display: "block" }}>Closet</div>
+              </span>
             </MainNavBarigth>
             {/* Display search bar on the homepage only */}
             {!onSearchPage && (
@@ -122,13 +136,13 @@ const Header: React.FC = () => {
                   return (
                     <NavigationLink key={item.title} href={item.redirectTo}>
                       <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                        {item.icon && <Icon icon={item.icon} size={24} /> } {/* Render the icon */}
-       
-                     
-                        {item.title && ( 
-                            <> {getText(item.title, HomeHeaderConfigTranslations, item.title)}</>
-                          
-                )}
+                        {item.icon && <Icon icon={item.icon} size={24} />} {/* Render the icon */}
+
+
+                        {item.title && (
+                          <> {getText(item.title, HomeHeaderConfigTranslations, item.title)}</>
+
+                        )}
                       </span>
                     </NavigationLink>
                   );
@@ -140,6 +154,7 @@ const Header: React.FC = () => {
                       style={{ cursor: "pointer" }}
                       onClick={() => toggleSearchBox()}
                     >
+                      
                       {openSearch && !onSearchPage ? (
                         <div style={{ color: Theme.searchIcon }}><Icon icon={x} size={24} /></div>
                       ) : (
@@ -198,15 +213,15 @@ const Header: React.FC = () => {
 
         </Navbar>
       </Wrapper>
-      <Fade in={openSearch && !onSearchPage}>
+      {/* <Fade in={openSearch && !onSearchPage}>
         <SearchContainer>
           <SearchBoxContainer>
-            {!onSearchPage && 
-             <HomeProductsSearchBox toggleSearchBox={toggleSearchBox} /> 
+            {!onSearchPage &&
+              <HomeProductsSearchBox toggleSearchBox={toggleSearchBox} />
             }
           </SearchBoxContainer>
         </SearchContainer>
-      </Fade>
+      </Fade> */}
     </>
   );
 };
@@ -251,7 +266,6 @@ const TopLeft = styled.div`
 const TopLinkWrapper = styled.ul`
   display: flex;
   flex-direction:row;
-  justify-content:center;
   white-space: nowrap; /* Prevents links from wrapping to a new line */
   gap:15px;
   align-items: center;
