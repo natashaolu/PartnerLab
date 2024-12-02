@@ -35,12 +35,21 @@ const Variant = styled.img`
   border: 1px solid #f5f5f5;
 `
 
+
+const getFirstImageUrl = (imageField) => {
+  if (!imageField || typeof imageField !== "string") {
+    return ""; // Return an empty string if the input is invalid
+  }
+
+  return imageField.split(";")[0] || "";
+};
+
 const formatPrice = (price) => {
   return price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 };
 
 const ResultTemplate = ({ controller, product }) => {
-  const [productImage, setProductImage] = React.useState(product.ec_images[0]);
+  const [productImage, setProductImage] = React.useState(getFirstImageUrl(product.ec_images[0]));
   const interactiveResult = controller.interactiveProduct({options :{
     product: product,
   }})

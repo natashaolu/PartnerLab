@@ -19,6 +19,15 @@ interface RecommendationSliderProps {
     engine: any;
 }
 
+
+function getFirstImageUrl(imageField: string): string { 
+  if (!imageField || typeof imageField !== "string") { 
+    return ""; // Return an empty string if the input is invalid } 
+  
+  }
+  return imageField.split(";")[0] || ""; 
+}
+
 const RecommendationSlider = ({ config, controller, engine }: RecommendationSliderProps) => {
 
     const { getText } = useContext(LanguageContext)
@@ -83,7 +92,7 @@ const RecommendationSlider = ({ config, controller, engine }: RecommendationSlid
                 <CardWrapper ref={scrollContainerRef}>
                 {state.recommendations.length > 0 ? (
                     state.recommendations.slice(0, NumberOfResults).map((recommendation) => {
-                    const temp: unknown = recommendation.raw[`${config.imageField}`];
+                    const temp: unknown = getFirstImageUrl(recommendation.raw.ec_images as string);
                     const imageURL: string = temp as string;
                     return (
                         <div key={recommendation.title + recommendation.uniqueId}>
