@@ -55,8 +55,8 @@ export const TopHeaderConfig = [
     redirectTo: "/home",
   },
   {
-    title: "Applications",
-    redirectTo: "/",
+    title: "Catalog",
+    redirectTo: "/search",
   },
   {
     title: "Service & Support",
