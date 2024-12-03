@@ -51,20 +51,12 @@ export const HeaderConfig = [
 
 export const TopHeaderConfig = [
   {
-    title: "Products",
+    title: "Home",
     redirectTo: "/home",
   },
   {
-    title: "Catalog",
+    title: "Products",
     redirectTo: "/search",
-  },
-  {
-    title: "Service & Support",
-    redirectTo: "/",
-  },
-  {
-    title: "Ressources",
-    redirectTo: "/",
   },
   {
     title: "Our Company",
