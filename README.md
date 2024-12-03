@@ -74,3 +74,19 @@ When creating a new branch, please follow this format:
 `GDE-CAPI-<feature-name>`
 
 Replace `<feature-name>` with a brief, descriptive name of the feature or task you're working on.
+
+
+
+## Hosting on netlify
+
+Follow the guide below to host it on Netlify
+
+- Install Netlify CLI using `npm install netlify-cli -g` (close the terminal after installation and open it again)
+- Build the application `npm run build`
+- Deploy using `netlify deploy --prod`. You will be asked to login for the first time and answer the questions as below.
+  - Create & configure a new site
+  - select team => `<select the team it shows>`
+  - site name => `<name-of-your-demo>`
+  - Publish directory => `build`
+
+After hosting is complete, the website URL will show up in the terminal.
