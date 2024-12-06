@@ -129,9 +129,9 @@ const Header: React.FC = () => {
             <MainNavBarleft>
 
               <LinkWrapper>
-                {HeaderConfig.map((item, index) => {
+                {HeaderConfig.map((item) => {
 
-                  if (index === 0) return <BasicMenu />
+                 
 
                   return (
                     <NavigationLink key={item.title} href={item.redirectTo}>
@@ -195,7 +195,8 @@ const Header: React.FC = () => {
 
           <TopLeft>
 
-            {TopHeaderConfig.map((item) => {
+            {TopHeaderConfig.map((item, index) => {
+               if (index === 0) return <BasicMenu />
               return (
                 <TopNavigationLink key={item.title} href={item.redirectTo}>
                   {
@@ -203,10 +204,14 @@ const Header: React.FC = () => {
                     getText(item.title, "title")
                   }
                 </TopNavigationLink>
-
+                  
               );
+              
 
-            })}
+            })
+            
+            
+            }
 
           </TopLeft>
 
@@ -276,9 +281,14 @@ const TopLinkWrapper = styled.ul`
 `;
 
 const TopNavigationLink = styled.a`
+ 
   color: ${Theme.primaryText};
-  padding:0 10px;
-  font-size: 18px;
+  text-align:center;
+  box-sizing:border-box;
+  border:0;
+  margin:0;
+  padding:5px 15px;
+  font-size: 1rem;
   font-weight:500;
   text-decoration:none;
   opacity: 1;
@@ -319,13 +329,13 @@ const MainNavBarleft = styled.div`
     display: flex;
   align-items: center;
   justify-content: flex-end;
-  flex: 1; /* Allow it to grow and take equal space */
+  flex: 0.75; /* Allow it to grow and take equal space */
 `;
 const MainNavBarigth = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1; /* Allow it to grow and take equal space */
+  flex: 0.75; /* Allow it to grow and take equal space */
 `;
 const Wrapper = styled.header`
   box-shadow: 0 2px 8px rgb(229 232 232 / 75%);

@@ -3,6 +3,8 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { getOrganizationEndpoints } from '@coveo/headless';
+import styled from "styled-components";
+import { Theme } from "../../config/theme";
 
 export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -50,16 +52,16 @@ export default function BasicMenu() {
   }
 
   return (
-    <div>
-      <Button
+    <>
+      <TopNavigationLink
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onMouseOver={handleClick}
       >
-        Products
-      </Button>
+        FEATURED LISTINGS
+      </TopNavigationLink>
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
@@ -76,6 +78,29 @@ export default function BasicMenu() {
             return <MenuItem key={item.id} onClick={()=>window.open(item.patterns[0].url.replace("https://sports.barca.group",""), "_self")}>{item.name}</MenuItem>
         })}
       </Menu>
-    </div>
+    </>
   );
 }
+
+const TopNavigationLink = styled.a`
+ position: relative;
+  color: ${Theme.primaryText};
+  background-color:#E1F88F;
+  justify-content:space-evenly;
+  text-align:center;
+  box-sizing:border-box;
+  border:0;
+  margin:0;
+  padding:6px 8px;
+  font-size: 1rem;
+  font-weight:500;
+  text-decoration:none;
+  opacity: 1;
+  transition: 0.2s ease-in-out all;
+  &:hover {
+    opacity: 0.7;
+  }
+  @media (max-width: 1000px) {
+    display: none;
+  }
+`;

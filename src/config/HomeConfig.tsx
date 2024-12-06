@@ -27,12 +27,39 @@ export const FooterLogo = CoveoLogo;
 export const DefaultRecommendationImage = RecommendationDefault;
 
 // TODO When generating JSON, dynamically generate internationalization config in admin console to include these elements.
-export const HeaderConfig = [
+
+export const TopHeaderConfig = [
   {
-    title: 'Airport Shop',
-    redirectTo: '/shop',
-    icon: plane, // Icon object
+    title: "Listings",
+    redirectTo: "/",
   },
+  {
+    title: "MEN",
+    redirectTo: "https://fashion.coveodemo.com/plp/men",
+  },
+  {
+    title: "WOMEN",
+    redirectTo: "https://fashion.coveodemo.com/plp/women",
+  },
+  {
+    title: "KIDS",
+    redirectTo: "https://fashion.coveodemo.com/plp/kids",
+  },
+  {
+    title: "OUR COMPANY",
+    redirectTo: "/",
+  },
+  
+];
+
+
+export const HeaderConfig = [
+
+  // {
+  //   title: 'Airport Shop',
+  //   redirectTo: '/shop',
+  //   icon: plane, // Icon object
+  // },
 
   {
     title: '',
@@ -48,22 +75,6 @@ export const HeaderConfig = [
 ];
 
 
-
-export const TopHeaderConfig = [
-  {
-    title: "Home",
-    redirectTo: "/home",
-  },
-  {
-    title: "Products",
-    redirectTo: "/search",
-  },
-  {
-    title: "Our Company",
-    redirectTo: "/",
-  },
-  
-];
 
 
 
