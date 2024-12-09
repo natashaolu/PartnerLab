@@ -102,7 +102,7 @@ const Header: React.FC = () => {
         <Navbar>
           <MainNavBar>
             <MainNavBarigth>
-              {/* The Closet branding with navigation */}
+              {/* shopLab branding with navigation */}
               <span
                 style={{
                   marginLeft: "10px",
@@ -115,8 +115,8 @@ const Header: React.FC = () => {
                 }}
                 onClick={() => navigate("/home")} // Add navigation functionality
               >
-                <div style={{ display: "block" }}>The</div>
-                <div style={{ display: "block" }}>Closet</div>
+                <div style={{ display: "block" }}>shop</div>
+                <div style={{ display: "block" }}>Lab</div>
               </span>
             </MainNavBarigth>
             {/* Display search bar on the homepage only */}
